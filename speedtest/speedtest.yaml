@@ -5,11 +5,11 @@ sensor:
   - platform: command_line
     name: "ookla"
     command: "/config/apps/speedtest -f json-pretty --accept-license --accept-gdpr"
-    scan_interval: 1801
+    scan_interval: 31
     value_template: "{{ value_json.timestamp }}"
     json_attributes:
-      - ping.latency
-      - ping.jitter
+      - latency
+      - jitter
 
 #eof
 
