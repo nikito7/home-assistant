@@ -13,4 +13,38 @@ sensor:
         {% set up = value_json.upload.bandwidth|string %}
         {{ ping + "," + dn + "," + up }}
 
+template:
+
+  - sensor:
+
+    - name: "Ookla Ping"
+      state: >-
+        {% set x = states('sensor.ookla_data').split(',')[0] | float(0) %}
+        {% if x > 0 %}
+          {{ x }}
+        {% else %}
+          {{ states('sensor.ookla_ping') }}
+        {% endif %}
+      icon: mdi:gauge
+
+    - name: "Ookla Download"
+      state: >-
+        {% set x = states('sensor.ookla_data').split(',')[1] | float(0) %}
+        {% if x > 0 %}
+          {{ x / 1024 }}
+        {% else %}
+          {{ states('sensor.ookla_download') }}
+        {% endif %}
+      icon: mdi:gauge
+
+    - name: "Ookla Upload"
+      state: >-
+        {% set x = states('sensor.ookla_data').split(',')[2] | float(0) %}
+        {% if x > 0 %}
+          {{ x / 1024 }}
+        {% else %}
+          {{ states('sensor.ookla_upload') }}
+        {% endif %}
+      icon: mdi:gauge
+
 #eof
