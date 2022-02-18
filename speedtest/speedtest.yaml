@@ -26,6 +26,7 @@ template:
           {{ states('sensor.ookla_ping') }}
         {% endif %}
       icon: mdi:gauge
+      unit_of_measurement: ms
 
     - name: "Ookla Download"
       state: >-
@@ -36,6 +37,7 @@ template:
           {{ states('sensor.ookla_download') }}
         {% endif %}
       icon: mdi:gauge
+      unit_of_measurement: Mbps
 
     - name: "Ookla Upload"
       state: >-
@@ -46,5 +48,6 @@ template:
           {{ states('sensor.ookla_upload') }}
         {% endif %}
       icon: mdi:gauge
+      unit_of_measurement: Mbps
 
 #eof
