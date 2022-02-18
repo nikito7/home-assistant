@@ -1,4 +1,2 @@
 
-```
-./speedtest --accept-license --accept-gdpr
-```
+```./speedtest --accept-license --accept-gdpr```
