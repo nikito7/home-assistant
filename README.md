@@ -1,0 +1,2 @@
+# ha-misc
+Home Assistant
