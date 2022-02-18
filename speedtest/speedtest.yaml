@@ -4,9 +4,8 @@ sensor:
 
   - platform: command_line
     name: "ookla"
-    command: "/config/apps/speedtest -f json-pretty --accept-license --accept-gdpr"
+    command: "/config/apps/speedtest -f json --accept-license --accept-gdpr"
     scan_interval: 31
-    value_template: "{{ value_json.timestamp }}"
     json_attributes:
       - latency
       - jitter
