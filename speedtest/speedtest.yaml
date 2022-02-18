@@ -3,10 +3,12 @@
 sensor:
 
   - platform: command_line
-    name: "ookla"
+    name: "Ookla Data"
     command: "/config/apps/speedtest -f json --accept-license --accept-gdpr"
     scan_interval: 31
-    value_template: "{{ value_json.ping.latency }}"
+    value_template: "{{ value_json.timestamp }}"
+    json_attributes:
+      - ping
 
 #eof
 
