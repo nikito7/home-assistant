@@ -6,9 +6,7 @@ sensor:
     name: "ookla"
     command: "/config/apps/speedtest -f json --accept-license --accept-gdpr"
     scan_interval: 31
-    json_attributes:
-      - latency
-      - jitter
+    value_template: "{{ value_json }}"
 
 #eof
 
