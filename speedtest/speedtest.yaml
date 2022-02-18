@@ -10,7 +10,7 @@ sensor:
     value_template: >-
         {% set ping = value_json.ping.latency|string %}
         {% set dn = value_json.download.bandwidth|string %}
-        {% set up = value_json.up.bandwidth|string %}
+        {% set up = value_json.upload.bandwidth|string %}
         {{ ping + "," + dn + "," + up }}
 
 #eof
