@@ -1,2 +1,2 @@
 
-```./speedtest --accept-license --accept-gdpr```
+ookla speedtest cli
