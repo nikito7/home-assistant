@@ -27,6 +27,7 @@ template:
         {% endif %}
       icon: mdi:gauge
       unit_of_measurement: ms
+      state_class: measurement
 
     - name: "Ookla Download"
       state: >-
@@ -38,6 +39,7 @@ template:
         {% endif %}
       icon: mdi:gauge
       unit_of_measurement: Mbps
+      state_class: measurement
 
     - name: "Ookla Upload"
       state: >-
@@ -49,5 +51,6 @@ template:
         {% endif %}
       icon: mdi:gauge
       unit_of_measurement: Mbps
+      state_class: measurement
 
 #eof
