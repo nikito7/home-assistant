@@ -32,7 +32,7 @@ template:
       state: >-
         {% set x = states('sensor.ookla_data').split(',')[1] | float(0) %}
         {% if x > 0 %}
-          {{ (x / 1000 / 1000 * 8)|round(2) }}
+          {{ (x / 1024 / 1024 * 8)|round(2) }}
         {% else %}
           {{ states('sensor.ookla_download') }}
         {% endif %}
@@ -43,7 +43,7 @@ template:
       state: >-
         {% set x = states('sensor.ookla_data').split(',')[2] | float(0) %}
         {% if x > 0 %}
-          {{ (x / 1000 / 1000 * 8)|round(2) }}
+          {{ (x / 1024 / 1024 * 8)|round(2) }}
         {% else %}
           {{ states('sensor.ookla_upload') }}
         {% endif %}
