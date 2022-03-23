@@ -1,0 +1,19 @@
+# pkg/utm.yaml
+
+utility_meter:
+
+  utm_daily:
+    source: sensor.eb3_import
+    cycle: daily
+    tariffs:
+      - Normal
+
+  utm_monthly:
+    source: sensor.eb3_import
+    cycle: monthly
+    tariffs:
+      - Normal
+    #offset:
+    #  days: 4
+
+#EOF
