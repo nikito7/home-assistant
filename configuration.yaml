@@ -28,7 +28,7 @@ homeassistant:
     testxxxxx: !include pkg/test.yaml
     #speedtest: !include pkg/speedtest.yaml
     utmxxxxxx: !include pkg/utm.yaml
-    modpollxx: !include pkg/modpoll.yaml
+    #modpollxx: !include pkg/modpoll.yaml
 
 http:
 
