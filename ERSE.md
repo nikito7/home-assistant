@@ -12,4 +12,5 @@ mv pt.json translations/
 ls -a
 sleep 1
 ha core restart
+#
 ```
