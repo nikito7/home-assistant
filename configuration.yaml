@@ -71,7 +71,14 @@ sensor monitor:
 
   - platform: systemmonitor
     resources:
+      - type: disk_use_percent
+        arg: /config
+      - type: disk_use
+      - type: disk_free
+      - type: memory_use_percent
       - type: memory_free
+      - type: memory_use
+      - type: swap_use_percent
       - type: processor_use
 
 ###
