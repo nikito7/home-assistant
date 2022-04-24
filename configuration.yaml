@@ -54,7 +54,7 @@ recorder:
 sensor mariadb:
 
 - platform: sql
-  db_url: mysql://hassio:hassio@10.1.0.71/homeassistant?charset=utf8
+  db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   queries:
     - name: "DB Size MB"
       query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / (1024 * 1024), 1) "value" FROM information_schema.tables WHERE table_schema="homeassistant" GROUP BY table_schema;'
