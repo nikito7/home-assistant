@@ -51,16 +51,6 @@ recorder:
       - sensor.eb3_clock*
 ###
 
-sensor mariadb:
-
-- platform: sql
-  db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
-  queries:
-    - name: "DB Size MB"
-      query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / (1024 * 1024), 1) "value" FROM information_schema.tables WHERE table_schema="homeassistant" GROUP BY table_schema;'
-      column: "value"
-      unit_of_measurement: "MB"
-
 ###
 
 sensor integral: !include integral.yaml
@@ -71,13 +61,8 @@ sensor monitor:
 
   - platform: systemmonitor
     resources:
-      - type: disk_use_percent
-        arg: /config
-      - type: disk_use
       - type: disk_free
-      - type: memory_use_percent
       - type: memory_free
-      - type: memory_use
       - type: swap_use_percent
       - type: processor_use
 
@@ -124,16 +109,6 @@ climate:
     precision: 0.1
 
 ###
-
-sensor gps:
-
-  - platform: template
-    sensors:
-      gps_accuracy:
-        friendly_name: "GPS Accuracy"
-        unit_of_measurement: "m"
-        value_template: "{{ state_attr('device_tracker.s7', 'gps_accuracy') | int(0) }}"
-        icon_template: "mdi:bullseye"
 
 ###
 
