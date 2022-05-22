@@ -16,6 +16,7 @@
             {% endif %}
         device_class: power
         unit_of_measurement: "W"
+        state_class: measurement
 
       sun_elevation:
         friendly_name: Sun Elevation
