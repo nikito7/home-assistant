@@ -5,19 +5,6 @@
   - platform: template
     sensors:
 
-      u1_power:
-        friendly_name: U1 Power
-        value_template: >-
-            {% set a = states('sensor.u1_nominal_real_power')|int(0) %}
-            {% set b = states('sensor.u1_load')|int(0) %}
-            {% set x = (a * b / 100)|int(0) %}
-            {% if x > 0 %}
-              {{ x }}
-            {% endif %}
-        device_class: power
-        unit_of_measurement: "W"
-        state_class: measurement
-
       sun_elevation:
         friendly_name: Sun Elevation
         unit_of_measurement: '°'
