@@ -1,28 +1,29 @@
 # /config/pkg/integral.yaml
 
-#sensor:
+template:
+#
+  - sensor:
+#  
+    - name: Sun Elevation
+      state: "{{ state_attr('sun.sun', 'elevation') }}"
+      state_class: measurement
+      unit_of_measurement: '°'
 
-  - platform: template
-    sensors:
+    - name: Fake Export W
+      state: >-
+        {% set a = states('sensor.sun_elevation')|float %}
+        {% if a > 0 %}
+          {{ (a * 20)|round(1) }}
+        {% else %}
+          {{ 1 }}
+        {% endif %}
+      device_class: power
+      state_class: measurement
+      unit_of_measurement: "W"
 
-      sun_elevation:
-        friendly_name: Sun Elevation
-        unit_of_measurement: '°'
-        value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+### ### ###
 
-      fake_export_w:
-        friendly_name: Fake Export W
-        value_template: >-
-            {% set a = states('sensor.sun_elevation')|float %}
-            {% if a > 0 %}
-              {{ (a * 20)|round(1) }}
-            {% else %}
-              {{ 1 }}
-            {% endif %}
-        device_class: power
-        unit_of_measurement: "W"
-
-###
+sensor:
 
   - platform: integration
     source: sensor.eb3_active_power_l1
@@ -56,7 +57,7 @@
 
   - platform: integration
     source: sensor.fake_export_w
-    name: Fake Export 2 kWh
+    name: Fake Export kWh
     unit_prefix: k
     round: 2
 
