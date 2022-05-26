@@ -27,7 +27,8 @@ homeassistant:
     tasmota3: !include pkg/tasmota3.yaml
     test:     !include pkg/test.yaml
     #speedtest: !include pkg/speedtest.yaml
-    #modpollxx: !include pkg/modpoll.yaml
+    #modpoll:   !include pkg/modpoll.yaml
+    integral:   !include pkg/integral.yaml
 
 http:
 
@@ -52,8 +53,6 @@ recorder:
 ###
 
 ###
-
-sensor integral: !include integral.yaml
 
 ###
 
