@@ -21,6 +21,18 @@ template:
       state_class: measurement
       unit_of_measurement: "W"
 
+    - name: Fake Solar W
+      state: >-
+        {% set a = states('sensor.sun_elevation')|float %}
+        {% if a > 0 %}
+          {{ (a * 20 * 1.25)|round(1) }}
+        {% else %}
+          {{ 1 }}
+        {% endif %}
+      device_class: power
+      state_class: measurement
+      unit_of_measurement: "W"
+
     - name: "U1 Power"
       state: >-
         {% set a = states('sensor.u1_nominal_real_power')|int(0) %}
@@ -70,6 +82,12 @@ sensor:
   - platform: integration
     source: sensor.fake_export_w
     name: Fake Export kWh
+    unit_prefix: k
+    round: 2
+
+  - platform: integration
+    source: sensor.fake_solar_w
+    name: Fake Solar kWh
     unit_prefix: k
     round: 2
 
