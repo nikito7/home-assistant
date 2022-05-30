@@ -4,6 +4,7 @@ set server=
 set user=
 set pass=
 set topic=
+set app=./mqtt/mosquitto_pub.exe
 
 rem ### code ###
 
@@ -14,5 +15,7 @@ set usage=%%p
 )
 
 echo debug: %usage% %%
+
+%app%
 
 rem ### eof ###
