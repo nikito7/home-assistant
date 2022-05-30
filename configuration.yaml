@@ -115,7 +115,11 @@ mqtt:
 #
     - name: "Windows CPU Usage"
       state_topic: "windows/pc/cpu_usage"
-      value_template: '{{ value }}'
+      value_template: >-
+          {% set x = value|int(0) %}
+          {% if x < 101 %}
+            {{ x }}
+          {% endif %}
       unit_of_measurement: "%"
       state_class: measurement
       icon: mdi:gauge
