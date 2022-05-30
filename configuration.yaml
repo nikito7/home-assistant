@@ -111,7 +111,7 @@ climate:
 
 mqtt:
 #
-  sensors:
+  sensor:
 #
     - name: "Windows CPU Usage"
       state_topic: "windows/pc/cpu_usage"
