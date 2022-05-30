@@ -1,10 +1,10 @@
 @echo off
 
-set server=
-set user=
+set server=10.1.0.78
+set user=mqtt2021
 set pass=
-set topic=
-set app=./mqtt/mosquitto_pub.exe
+set topic=windows/pc/cpu
+set app="./mqtt/mosquitto_pub.exe -h %server% -u %user% -P %pass%"
 
 rem ### code ###
 
@@ -16,6 +16,6 @@ set usage=%%p
 
 echo debug: %usage% %%
 
-%app%
+%app% -t %topic% -m %usage%
 
 rem ### eof ###
