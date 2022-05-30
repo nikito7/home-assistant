@@ -109,6 +109,17 @@ climate:
 
 ###
 
+mqtt:
+#
+  sensors:
+#
+    - name: "Windows CPU Usage"
+      state_topic: "windows/pc/cpu_usage"
+      value_template: '{{ value }}'
+      unit_of_measurement: "%"
+      state_class: measurement
+      icon: mdi:gauge
+
 ###
 
 ###
