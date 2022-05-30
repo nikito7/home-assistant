@@ -3,8 +3,8 @@
 set server=10.1.0.78
 set user=mqtt2021
 set pass=
-set topic=/windows/pc/cpu_usage
-set app=.\mqtt\mosquitto_pub.exe -h %server% -u %user% -P %pass%
+set topic=windows/pc/cpu_usage
+set app=.\bin\mqtt\mosquitto_pub.exe -h %server% -u %user% -P %pass%
 
 rem ### code ###
 
