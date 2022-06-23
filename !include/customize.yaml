@@ -1,6 +1,6 @@
 # MariaDB
 
-sensor.select_value_sql_query:
+sensor.db_size:
   icon: mdi:database
   state_class: measurement
 
