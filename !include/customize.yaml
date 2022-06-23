@@ -1,16 +1,8 @@
 # MariaDB
 
-sensor.db_size_mb:
+sensor.select_value_sql_query:
   icon: mdi:database
-
-# EB1
-
-#sensor.eb1_frequency:
-#  icon: mdi:pulse
-#sensor.eb1_tariff:
-#  icon: mdi:counter
-#sensor.eb1_firmware_core:
-#  icon: mdi:chip
+  state_class: measurement
 
 # temp
 
