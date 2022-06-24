@@ -1,12 +1,7 @@
 #!/bin/sh
 
 secrets=./secrets.yaml
-
-###
-
-token=$(cat $secrets | grep apitoken | awk -F ": " '{ print $2 }'
-)
-
+token=$(cat $secrets | grep apitoken | awk -F ": " '{ print $2 }')
 host=10.1.0.78:8123
 
 curl -X POST -H 'Authorization: Bearer '${apitoken} \
