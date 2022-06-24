@@ -4,14 +4,9 @@ secrets=./secrets.yaml
 
 ###
 
-function get()
-{
-cat $secrets | grep $1 | awk -F ": " '{ print $2 }'
-}
+token=$(cat $secrets | grep apitoken | awk -F ": " '{ print $2 }'
+)
 
-###
-
-token=$(get apitoken)
 host=10.1.0.78:8123
 
 curl -X POST -H 'Authorization: Bearer '${apitoken} \
