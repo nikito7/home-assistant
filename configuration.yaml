@@ -25,6 +25,7 @@ homeassistant:
     tasmota1: !include pkg/tasmota1.yaml
     #modbus3: !include pkg/modbus3.yaml
     tasmota3: !include pkg/tasmota3.yaml
+    tasmota5: !include pkg/tasmota5.yaml
     test:     !include pkg/test.yaml
     #speedtest: !include pkg/speedtest.yaml
     #modpoll:   !include pkg/modpoll.yaml
@@ -44,12 +45,15 @@ recorder:
     entities:
       - sensor.eb1_esp_clock
       - sensor.eb3_esp_clock
+      - sensor.eb5_esp_clock
       - sensor.eb3_ha_clock
     entity_globs:
       - sensor.eb1_0x*
       - sensor.eb3_0x*
       - sensor.eb1_clock*
       - sensor.eb3_clock*
+      - sensor.eb5_clock*
+
 ###
 
 ###
