@@ -58,6 +58,10 @@ recorder:
 
 ###
 
+device_tracker:
+
+  - platform: bluetooth_le_tracker
+
 ###
 
 sensor monitor:
