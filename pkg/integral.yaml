@@ -8,7 +8,7 @@ template:
       state: "{{ state_attr('sun.sun', 'elevation') }}"
       state_class: measurement
       unit_of_measurement: '°'
-      icon: mdi:sun
+      icon: "mdi:sun-angle"
 
     - name: Fake Export W
       state: >-
