@@ -8,12 +8,13 @@ template:
       state: "{{ state_attr('sun.sun', 'elevation') }}"
       state_class: measurement
       unit_of_measurement: '°'
+      icon: mdi:sun
 
     - name: Fake Export W
       state: >-
         {% set a = states('sensor.sun_elevation')|float %}
         {% if a > 0 %}
-          {{ (a * 20 * 6.76)|round(1) }}
+          {{ (a * 8 * 6.76)|round(1) }}
         {% else %}
           {{ 1 }}
         {% endif %}
@@ -25,7 +26,7 @@ template:
       state: >-
         {% set a = states('sensor.sun_elevation')|float %}
         {% if a > 0 %}
-          {{ (a * 20 * 6.76 * 1.25)|round(1) }}
+          {{ (a * 8 * 6.76)|round(1) }}
         {% else %}
           {{ 1 }}
         {% endif %}
