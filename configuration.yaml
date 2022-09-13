@@ -12,11 +12,20 @@ script: !include scripts.yaml
 #    filename: /config/loadprofile-1.csv
 #    timestamp: true
 
-#logger:
-#  logs:
-#    homeassistant.components.modbus: debug
-#    pymodbus.client: debug
-#    custom_components.modbus.modbus: debug
+###
+
+logger:
+#
+  default: info
+#
+  logs:
+#
+    homeassistant.components.utility_meter: debug
+    #homeassistant.components.modbus: debug
+    #pymodbus.client: debug
+    #custom_components.modbus.modbus: debug
+
+###
 
 homeassistant:
 
