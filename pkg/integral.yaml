@@ -5,12 +5,13 @@ template:
   - sensor:
 #
     - name: SR1 Water Level
+      unique_id: sr1_water_level
       state: >-
         {% set a = states('sensor.tas_sr1_sr04_distance')|float(0) %}
         {% set b = 25 %}  
         {{ ((b - a) / 100)|round(1) }}
       unit_of_measurement: "m"
-      icon: "mdi:level"
+      icon: "mdi:leak"
 
     - name: Sun Elevation
       state: "{{ state_attr('sun.sun', 'elevation') }}"
