@@ -8,8 +8,10 @@ template:
       unique_id: sr1_water_level
       state: >-
         {% set a = states('sensor.tas_sr1_sr04_distance')|float(0) %}
-        {% set b = 25 %}  
-        {{ ((b - a) / 100)|round(2) }}
+        {% set b = 25 %}
+        {% if a > 0 %}
+          {{ ((b - a) / 100)|round(2) }}
+        {% endif %}
       state_class: measurement
       unit_of_measurement: "m"
       icon: "mdi:leak"
