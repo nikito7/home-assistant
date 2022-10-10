@@ -8,7 +8,7 @@ template:
       unique_id: sr1_water_level
       state: >-
         {% set a = states('sensor.tas_sr1_sr04_distance')|float(0) %}
-        {% set b = 30 %}
+        {% set b = 20 %}
         {% if a > 0 %}
           {{ ((b - a) / 100)|round(2) }}
         {% endif %}
