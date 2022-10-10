@@ -39,6 +39,7 @@ homeassistant:
     #speedtest: !include pkg/speedtest.yaml
     #modpoll:   !include pkg/modpoll.yaml
     integral:   !include pkg/integral.yaml
+    template:   !include pkg/template.yaml
 
 http:
 
