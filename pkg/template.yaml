@@ -4,11 +4,11 @@ template:
 #
   - sensor:
 #
-    - name: SR1 Water Level
-      unique_id: sr1_water_level
+    - name: T8 Water Level
+      unique_id: t8_water_level
       state: >-
         {% set a = states('sensor.t8_ultrasonic')|float(0) %}
-        {% set b = 50 %}
+        {% set b = 0.50 %}
         {% if a > 0 %}
           {{ (b - a)|round(2) }}
         {% endif %}
