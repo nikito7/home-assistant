@@ -19,8 +19,8 @@ template:
     - name: T8 Water Level
       unique_id: t8_water_level
       state: >-
-        {% set a = states('sensor.t8_ultrasonic_filter')|float(0.0) %}
         {% set b = 0.40 %}
+        {% set a = states('sensor.t8_ultrasonic_filter')|float(b) %}
         {{ (b - a)|round(3) }}
       state_class: measurement
       device_class: distance
