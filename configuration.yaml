@@ -6,12 +6,6 @@ automation: !include automations.yaml
 scene: !include scenes.yaml
 script: !include scripts.yaml
 
-#notify:
-#  - name: loadprofile
-#    platform: file
-#    filename: /config/loadprofile-1.csv
-#    timestamp: true
-
 ###
 
 logger:
@@ -40,6 +34,7 @@ homeassistant:
     #modpoll:   !include pkg/modpoll.yaml
     integral:   !include pkg/integral.yaml
     template:   !include pkg/template.yaml
+    water:      !include pkg/water.yaml
 
 http:
 
@@ -49,7 +44,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 2
+  purge_keep_days: 8
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
@@ -139,6 +134,12 @@ mqtt:
       icon: mdi:gauge
 
 ###
+
+#notify:
+#  - name: loadprofile
+#    platform: file
+#    filename: /config/loadprofile-1.csv
+#    timestamp: true
 
 ###
 ##
