@@ -11,6 +11,7 @@ template:
         {% set b = 0.40 %}
         {{ (b - a)|round(3) }}
       state_class: measurement
+      device_class: distance
       unit_of_measurement: "m"
       icon: "mdi:leak"
 
