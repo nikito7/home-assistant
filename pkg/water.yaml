@@ -7,9 +7,9 @@ template:
     - name: T8 Water Level
       unique_id: t8_water_level
       state: >-
-        {% set a = states('sensor.t8_ultrasonic')|float(-1) %}
+        {% set a = states('sensor.t8_ultrasonic')|float(0.0) %}
         {% set b = 0.40 %}
-        {{ (b - a)|round(2) }}
+        {{ (b - a)|round(3) }}
       state_class: measurement
       unit_of_measurement: "m"
       icon: "mdi:leak"
