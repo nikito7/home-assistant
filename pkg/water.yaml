@@ -9,7 +9,7 @@ template:
       state: >-
         {% set a = 0.40 %}
         {% set b = states('sensor.t8_ultrasonic') %}
-        {% if b is defined %}
+        {% if b != none %}
           {{ (a - b)|round(2) }}
         {% endif %}
       state_class: measurement
