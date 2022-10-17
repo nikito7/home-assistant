@@ -14,7 +14,7 @@ template:
           {{ 0.999 }}
         {% else %}
           {{ c }}
-        {% endif }}
+        {% endif %}
       state_class: measurement
       device_class: distance
       unit_of_measurement: "m"
