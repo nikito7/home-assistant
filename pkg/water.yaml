@@ -1,17 +1,5 @@
 # /config/pkg/water.yaml
-
-sensor:
 #
-  - platform: filter
-    name: "T8 Ultrasonic Filter"
-    entity_id: sensor.t8_ultrasonic
-    filters:
-      - filter: outlier
-        window_size: 11
-        radius: 0.05
-
-### ### ###
-
 template:
 #
   - sensor:
@@ -19,9 +7,14 @@ template:
     - name: T8 Water Level
       unique_id: t8_water_level
       state: >-
-        {% set b = 0.40 %}
-        {% set a = states('sensor.t8_ultrasonic_filter')|float(b*2) %}
-        {{ (b - a)|round(3) }}
+        {% set a = 0.40 %}
+        {% set b = states('sensor.t8_ultrasonic')|float(a*3) %}
+        {% set c = (a - b)|round(3) %}
+        {% if c > 0.9 %}
+          {{ 0.999 }}
+        {% else %}
+          {{ c }}
+        {% endif }}
       state_class: measurement
       device_class: distance
       unit_of_measurement: "m"
