@@ -8,9 +8,11 @@ template:
       unique_id: t8_water_level
       state: >-
         {% set a = 0.40 %}
-        {% set b = states('sensor.t8_ultrasonic')|float(999) %}
-        {% if b != 999 %}
+        {% set b = states('sensor.t8_ultrasonic')|float(None) %}
+        {% if b != None %}
           {{ (a - b)|round(2) }}
+        {% else %}
+          {{ states('sensor.t8_water_level') }}
         {% endif %}
       state_class: measurement
       device_class: distance
