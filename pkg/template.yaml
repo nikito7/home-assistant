@@ -7,14 +7,16 @@ template:
     - name: "Tempo de Disparo ICP"
       icon: "mdi:skull-crossbones-outline"
       state: >-
-        {% set potencia_aparente_inst = states('sensor.eb3_active_power_import')|float(0)/states('sensor.eb3_power_factor')|float(0) %}
-        {% set potencia_aparente_cont = 10350 %}
-        {% set Q_factor = 50 %}
+        {% set watts = states('sensor.eb3_active_power_import')|float(0) %}
+        {% set pf = states('sensor.eb3_power_factor')|float(0) %} 
+        {% set potencia_inst = watts/pf %}
+        {% set potencia_max_kva = 3450 %}
+        {% set q_factor = 50 %}
         {% set k_factor = 1.2 %}
-        {% if potencia_aparente_inst > potencia_aparente_cont*k_factor %}
-          {{ (Q_factor/((potencia_aparente_inst/potencia_aparente_cont)-k_factor))|int(0)|round(0) }}
+        {% if potencia_inst > potencia_max_kva*k_factor %}
+          {{ (q_factor/((potencia_inst/potencia_max_kva)-k_factor))|int(0)|round(0) }}
         {% else %}
-          {{ ((Q_factor/((potencia_aparente_inst/potencia_aparente_cont)-k_factor))|int(0)|round(0))*-1+300 }}
+          {{ 0 }}
         {% endif %}
       unit_of_measurement: 's'
 
