@@ -16,6 +16,6 @@ template:
         {% else %}
           {{ 0 }}
         {% endif %}
-     unit_of_measurement: 's'
+      unit_of_measurement: 's'
 
 # EOF
