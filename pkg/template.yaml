@@ -10,7 +10,7 @@ template:
         {% set watts = states('sensor.eb3_active_power_import')|float(1) %}
         {% set pf = states('sensor.eb3_power_factor')|float(1) %} 
         {% set potencia_inst = (watts/pf) %}
-        {% set potencia_max_kva = (2.30*1000) %}
+        {% set potencia_max_kva = (1.15*1000) %}
         {% set q_factor = 50 %}
         {% set k_factor = (120/100) %}
         {% if potencia_inst > potencia_max_kva*k_factor %}
