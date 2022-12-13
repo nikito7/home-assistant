@@ -8,13 +8,13 @@ script: !include scripts.yaml
 
 ###
 
-logger:
+#logger:
 #
-  default: info
+#  default: info
 #
-  logs:
+#  logs:
 #
-    homeassistant.components.utility_meter: debug
+    #homeassistant.components.utility_meter: debug
     #homeassistant.components.modbus: debug
     #pymodbus.client: debug
     #custom_components.modbus.modbus: debug
@@ -44,7 +44,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 8
+  purge_keep_days: 2
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
@@ -71,7 +71,6 @@ sensor monitor:
     resources:
       - type: disk_free
       - type: memory_free
-      - type: swap_use_percent
       - type: processor_use
 
 ###
