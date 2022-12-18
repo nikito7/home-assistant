@@ -80,6 +80,7 @@ sensor monitor:
 climate:
 
   - platform: generic_thermostat
+    unique_id: heat_p1_7c
     name: Heat P1 7C
     heater: switch.athom_p1
     target_sensor: sensor.mho_7c_temp
@@ -98,6 +99,7 @@ climate:
     precision: 0.1
 
   - platform: generic_thermostat
+    unique_id: heat_p1_gn
     name: Heat P1 GN
     heater: switch.athom_p1
     target_sensor: sensor.mmc_33_temp
