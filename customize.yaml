@@ -1,3 +1,7 @@
+# fix error log
+sensor.*_energy_factor:
+  unit_of_measurement: "%"
+
 # MariaDB
 
 sensor.db_size:
