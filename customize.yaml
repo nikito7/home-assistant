@@ -1,5 +1,6 @@
 # fix error log
-sensor.*_energy_factor:
+
+sensor.athom_p1_energy_factor:
   unit_of_measurement: "%"
 
 # MariaDB
