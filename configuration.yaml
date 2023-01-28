@@ -35,7 +35,7 @@ homeassistant:
     integral:   !include pkg/integral.yaml
     template:   !include pkg/template.yaml
     water:      !include pkg/water.yaml
-    lp3:       !include pkg/lp3.yaml
+    #lp3:       !include pkg/lp3.yaml
 
 http:
 
@@ -88,14 +88,12 @@ climate:
     min_temp: 15
     max_temp: 21
     ac_mode: false
-    #target_temp: 18.5
     cold_tolerance: 0.2
     hot_tolerance: 0.2
     min_cycle_duration:
       seconds: 5
     keep_alive:
       minutes: 2
-    #initial_hvac_mode: "off"
     away_temp: 16
     precision: 0.1
 
@@ -107,14 +105,12 @@ climate:
     min_temp: 15
     max_temp: 21
     ac_mode: false
-    #target_temp: 18.5
     cold_tolerance: 0.2
     hot_tolerance: 0.2
     min_cycle_duration:
       seconds: 5
     keep_alive:
       minutes: 2
-    #initial_hvac_mode: "off"
     away_temp: 16
     precision: 0.1
 
