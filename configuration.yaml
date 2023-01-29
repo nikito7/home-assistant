@@ -121,6 +121,7 @@ mqtt:
   sensor:
 #
     - name: "Windows CPU Usage"
+      unique_id: "win_pc_cpu"
       state_topic: "windows/pc/cpu_usage"
       value_template: >-
           {% set x = value|int(0) %}
