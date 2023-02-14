@@ -5,6 +5,7 @@ template:
   - sensor:
 #
     - name: Sun Elevation
+      unique_id: sun_elevation
       state: >-
         {% set x = state_attr('sun.sun', 'elevation')|float(0) %}
         {% if x > 0 %}
@@ -17,6 +18,7 @@ template:
       icon: "mdi:sun-angle"
 
     - name: Fake Export W
+      unique_id: fake_export_w
       state: >-
         {% set a = states('sensor.sun_elevation')|float %}
         {% if a > 0 %}
@@ -29,6 +31,7 @@ template:
       unit_of_measurement: "W"
 
     - name: Fake Solar W
+      unique_id: fake_solar_w
       state: >-
         {% set a = states('sensor.sun_elevation')|float %}
         {% if a > 0 %}
@@ -41,13 +44,12 @@ template:
       unit_of_measurement: "W"
 
     - name: "U1 Power"
+      unique_id: u1_power
       state: >-
         {% set a = states('sensor.u1_nominal_real_power')|int(0) %}
         {% set b = states('sensor.u1_load')|int(0) %}
         {% set x = (a * b / 100)|int(0) %}
-        {% if x > 0 %}
-          {{ x }}
-        {% endif %}
+        {{ x }}
       device_class: power
       state_class: measurement
       unit_of_measurement: "W"
