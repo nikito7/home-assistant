@@ -8,16 +8,23 @@ script: !include scripts.yaml
 
 ###
 
-#logger:
-#
-#  default: info
+logger:
+
+  default: info
 #
 #  logs:
 #
-    #homeassistant.components.utility_meter: debug
-    #homeassistant.components.modbus: debug
-    #pymodbus.client: debug
-    #custom_components.modbus.modbus: debug
+#    homeassistant.components.utility_meter: debug
+#    homeassistant.components.modbus: debug
+#    pymodbus.client: debug
+#    custom_components.modbus.modbus: debug
+
+###
+
+device_tracker:
+
+  - platform: bluetooth_le_tracker
+    track_new_devices: true
 
 ###
 
@@ -45,7 +52,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 1
+  purge_keep_days: 2
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
