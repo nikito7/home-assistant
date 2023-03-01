@@ -11,9 +11,10 @@ script: !include scripts.yaml
 logger:
 
   default: info
-#
-#  logs:
-#
+  logs:
+
+    pychromecast.socket_client: none
+
 #    homeassistant.components.utility_meter: debug
 #    homeassistant.components.modbus: debug
 #    pymodbus.client: debug
