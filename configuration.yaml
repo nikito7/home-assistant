@@ -13,7 +13,7 @@ logger:
   default: info
   logs:
 
-    pychromecast.socket_client: none
+    pychromecast.socket_client: notset
 
 #    homeassistant.components.utility_meter: debug
 #    homeassistant.components.modbus: debug
