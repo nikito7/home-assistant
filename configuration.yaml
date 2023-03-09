@@ -22,10 +22,10 @@ logger:
 
 ###
 
-device_tracker:
-
-  - platform: bluetooth_le_tracker
-    track_new_devices: false
+#device_tracker:
+#
+#  - platform: bluetooth_le_tracker
+#    track_new_devices: false
 
 ###
 
@@ -43,7 +43,7 @@ homeassistant:
     integral:   !include pkg/integral.yaml
     template:   !include pkg/template.yaml
     water:      !include pkg/water.yaml
-    #lp3:       !include pkg/lp3.yaml
+    lp3:       !include pkg/lp3.yaml
 
 http:
 
