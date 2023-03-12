@@ -1,7 +1,7 @@
 # radius
 
 zone.home:
-  radius: 100
+  radius: 50
 
 # fix error log
 
