@@ -1,3 +1,8 @@
+# radius
+
+zone.home:
+  radius: 100
+
 # fix error log
 
 sensor.athom_p1_energy_factor:
