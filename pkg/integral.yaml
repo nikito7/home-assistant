@@ -17,19 +17,6 @@ template:
       unit_of_measurement: '°'
       icon: "mdi:sun-angle"
 
-    - name: Fake Export W
-      unique_id: fake_export_w
-      state: >-
-        {% set a = states('sensor.sun_elevation')|float %}
-        {% if a > 0 %}
-          {{ (a * 8 * 6.76)|round(1) }}
-        {% else %}
-          {{ 1 }}
-        {% endif %}
-      device_class: power
-      state_class: measurement
-      unit_of_measurement: "W"
-
     - name: Fake Solar W
       unique_id: fake_solar_w
       state: >-
@@ -67,12 +54,6 @@ sensor:
   - platform: integration
     source: sensor.athom_p1_energy_power
     name: EM Athom P1
-    unit_prefix: k
-    round: 2
-
-  - platform: integration
-    source: sensor.fake_export_w
-    name: Fake Export kWh
     unit_prefix: k
     round: 2
 
