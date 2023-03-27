@@ -1,6 +1,6 @@
 # input
 
-input_number.agua_manual:
+input_number.agua_m:
   state_class: total_increasing
   device_class: water
   unit_of_measurement: L
