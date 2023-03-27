@@ -3,7 +3,7 @@
 input_number.agua_manual:
   state_class: total_increasing
   device_class: water
-  unit_of_measurement: m³
+  unit_of_measurement: L
 
 # radius
 
