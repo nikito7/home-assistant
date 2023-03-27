@@ -1,3 +1,8 @@
+# input
+
+input_number.agua_manual:
+  state_class: total_increasing
+
 # radius
 
 zone.home:
