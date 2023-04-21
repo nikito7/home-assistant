@@ -35,7 +35,7 @@ homeassistant:
   packages:
     #tasmota1: !include pkg/tasmota1.yaml
     #modbus3:  !include pkg/modbus3.yaml
-    tasmota3:  !include pkg/tasmota3.yaml
+    #tasmota3:  !include pkg/tasmota3.yaml
     tasmota5:  !include pkg/tasmota5.yaml
     test:       !include pkg/test.yaml
     #speedtest: !include pkg/speedtest.yaml
