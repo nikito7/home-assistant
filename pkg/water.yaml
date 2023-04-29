@@ -8,7 +8,7 @@ template:
       unique_id: t8_water_level
       state: >-
         {% set a = 0.40 %}
-        {% set b = states('sensor.t8_ultrasonic')|float(None) %}
+        {% set b = states('sensor.t08_ultrasonic')|float(None) %}
         {% if b != None %}
           {{ (a - b)|round(2) }}
         {% else %}
