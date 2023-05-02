@@ -44,6 +44,7 @@ homeassistant:
     template:   !include pkg/template.yaml
     water:      !include pkg/water.yaml
     lp3:       !include pkg/lp3.yaml
+    lp1:       !include pkg/lp1.yaml
 
 http:
 
