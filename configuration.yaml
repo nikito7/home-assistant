@@ -9,8 +9,9 @@ script: !include scripts.yaml
 ###
 
 tts:
-
   - platform: google_translate
+
+###
 
 logger:
 
@@ -74,6 +75,11 @@ recorder:
       - sensor.eb5_clock*
 
 ###
+
+intent_script:
+  hello:
+    speech:
+      text: "Hi there!"
 
 ###
 
