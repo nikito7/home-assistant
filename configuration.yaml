@@ -8,6 +8,10 @@ script: !include scripts.yaml
 
 ###
 
+tts:
+
+  - platform: google_translate
+
 logger:
 
   default: info
@@ -54,7 +58,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 5
+  purge_keep_days: 2
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
