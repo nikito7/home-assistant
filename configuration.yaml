@@ -12,9 +12,7 @@ tts:
 
   - platform: google_translate
     language: "pt"
-
-  - platform: google_translate
-    language: "en"
+    tld: "pt"
     
 ###
 
@@ -48,7 +46,7 @@ homeassistant:
     water:      !include pkg/water.yaml
     lp3:       !include pkg/lp3.yaml
     lp1:       !include pkg/lp1.yaml
-    climate:   !include pkg/climate.yaml
+    #climate:   !include pkg/climate.yaml
 
 ###
 
