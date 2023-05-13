@@ -52,12 +52,6 @@ sensor:
     round: 2
 
   - platform: integration
-    source: sensor.athom_p1_energy_power
-    name: EM Athom P1
-    unit_prefix: k
-    round: 2
-
-  - platform: integration
     source: sensor.fake_solar_w
     name: Fake Solar kWh
     unit_prefix: k
