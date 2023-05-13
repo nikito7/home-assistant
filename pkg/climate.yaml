@@ -1,0 +1,40 @@
+climate:
+
+
+  - platform: generic_thermostat
+    unique_id: heat_p1_7c
+    name: Heat P1 7C
+    heater: switch.athom_p1
+    target_sensor: sensor.mho_7c_temp
+    min_temp: 15
+    max_temp: 21
+    ac_mode: false
+    cold_tolerance: 0.2
+    hot_tolerance: 0.2
+    min_cycle_duration:
+      seconds: 5
+    keep_alive:
+      minutes: 2
+    away_temp: 16
+    precision: 0.1
+
+
+  - platform: generic_thermostat
+    unique_id: heat_p1_gn
+    name: Heat P1 GN
+    heater: switch.athom_p1
+    target_sensor: sensor.mmc_33_temp
+    min_temp: 15
+    max_temp: 21
+    ac_mode: false
+    cold_tolerance: 0.2
+    hot_tolerance: 0.2
+    min_cycle_duration:
+      seconds: 5
+    keep_alive:
+      minutes: 2
+    away_temp: 16
+    precision: 0.1
+
+
+# EOF
