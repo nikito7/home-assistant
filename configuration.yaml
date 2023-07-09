@@ -47,6 +47,7 @@ homeassistant:
     lp3:       !include pkg/lp3.yaml
     lp1:       !include pkg/lp1.yaml
     #climate:   !include pkg/climate.yaml
+    lora:       !include pkg/lora.yaml
 
 ###
 
