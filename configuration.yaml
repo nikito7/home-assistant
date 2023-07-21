@@ -48,7 +48,7 @@ homeassistant:
     lp1:       !include pkg/lp1.yaml
     #climate:   !include pkg/climate.yaml
     lora:       !include pkg/lora.yaml
-    mt-rest:    !include pkg/mt/rest.yaml
+    mt_rest:    !include pkg/mt/rest.yaml
 
 ###
 
