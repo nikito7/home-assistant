@@ -34,18 +34,10 @@ homeassistant:
 
   customize: !include customize.yaml
   packages:
-    #tasmota1: !include pkg/tasmota1.yaml
-    #modbus3:  !include pkg/modbus3.yaml
-    #tasmota3:  !include pkg/tasmota3.yaml
-    #tasmota5:  !include pkg/tasmota5.yaml
     test:       !include pkg/test.yaml
-    #speedtest: !include pkg/speedtest.yaml
-    #modpoll:   !include pkg/modpoll.yaml
     integral:   !include pkg/integral.yaml
     template:   !include pkg/template.yaml
     water:      !include pkg/water.yaml
-    lp3:       !include pkg/lp3.yaml
-    lp1:       !include pkg/lp1.yaml
     #climate:   !include pkg/climate.yaml
     mt_lora:    !include pkg/mt/lora.yaml
     mt_rest:    !include pkg/mt/rest.yaml
@@ -62,7 +54,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 1
+  purge_keep_days: 3
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
@@ -128,4 +120,3 @@ mqtt:
 ###
 ##
 #
-
