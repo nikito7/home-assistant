@@ -1,3 +1,8 @@
+# adc
+
+sensor.tasmota_adc_analog_a0:
+  unit_of_measurement: raw
+
 # input
 
 input_number.agua_m:
