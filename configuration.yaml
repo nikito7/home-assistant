@@ -42,6 +42,7 @@ homeassistant:
     #mt_lora:    !include pkg/mt/lora.yaml
     #mt_rest:    !include pkg/mt/rest.yaml
     ttn:        !include pkg/ttn.yaml
+    eb5ttn:     !include pkg/eb5-ttn.yaml
 
 ###
 
@@ -57,13 +58,13 @@ recorder:
 
   purge_keep_days: 1
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
-#  exclude:
-#    entities:
-#      - sensor.eb1_esp_clock
-#      - sensor.eb5_esp_clock
-#    entity_globs:
-#      - sensor.eb1_clock*
-#      - sensor.eb5_clock*
+  exclude:
+    entities:
+      - sensor.eb1_esp_clock
+      - sensor.eb3_esp_clock
+    entity_globs:
+      - sensor.eb1_clock*
+      - sensor.eb3_clock*
 
 ###
 
