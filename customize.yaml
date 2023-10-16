@@ -4,6 +4,11 @@ sensor.tasmota_adc_analog_a0:
   unit_of_measurement: raw
   state_class: measurement
 
+# pressure
+
+sensor.g930f_pressure_sensor:
+  state_class: measurement
+  
 # input
 
 input_number.agua_m:
@@ -19,7 +24,7 @@ zone.home:
 # fix error log
 
 sensor.athom_p1_energy_factor:
-  unit_of_measurement: "%"
+  unit_of_measurement: "None"
 
 # MariaDB
 
