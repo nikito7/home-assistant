@@ -38,7 +38,7 @@ homeassistant:
     integral:   !include pkg/integral.yaml
     template:   !include pkg/template.yaml
     water:      !include pkg/water.yaml
-    #climate:   !include pkg/climate.yaml
+    climate:    !include pkg/climate.yaml
     #mt_lora:    !include pkg/mt/lora.yaml
     #mt_rest:    !include pkg/mt/rest.yaml
     ttn:        !include pkg/ttn.yaml
