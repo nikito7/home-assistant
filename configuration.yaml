@@ -56,7 +56,7 @@ http:
 
 recorder:
 
-  purge_keep_days: 1
+  purge_keep_days: 7
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
   exclude:
     entities:
