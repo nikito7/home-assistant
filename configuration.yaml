@@ -76,13 +76,13 @@ intent_script:
 
 ###
 
-sensor monitor:
-
-  - platform: systemmonitor
-    resources:
-      - type: disk_free
-      - type: memory_free
-      - type: processor_use
+#sensor monitor:
+#
+#  - platform: systemmonitor
+#    resources:
+#      - type: disk_free
+#      - type: memory_free
+#      - type: processor_use
 
 ###
 
