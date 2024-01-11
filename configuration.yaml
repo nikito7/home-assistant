@@ -57,15 +57,15 @@ http:
 
 recorder:
 
-  purge_keep_days: 7
+  purge_keep_days: 3
   db_url: mysql://hassio:hassio@core-mariadb/homeassistant?charset=utf8mb4
-  exclude:
-    entities:
-      - sensor.eb1_esp_clock
-      - sensor.eb3_esp_clock
-    entity_globs:
-      - sensor.eb1_clock*
-      - sensor.eb3_clock*
+  #exclude:
+  #  entities:
+  #    - sensor.eb1_esp_clock
+  #    - sensor.eb3_esp_clock
+  #  entity_globs:
+  #    - sensor.eb1_clock*
+  #    - sensor.eb3_clock*
 
 ###
 
