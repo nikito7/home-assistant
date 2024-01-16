@@ -11,6 +11,7 @@ template:
 # Não refletido neste yaml.
 #
     - name: "Tempo de Disparo ICP"
+      unique_id: disparo_icp
       icon: "mdi:target-variant"
       state: >-
         {% set watts = states('sensor.eb3_active_power_import')|float(1) %}
@@ -28,6 +29,7 @@ template:
       unit_of_measurement: 's'
 
     - name: "Tempo de Disparo ICP L1"
+      unique_id: disparo_icp_L1
       icon: "mdi:target-variant"
       state: >-
         {% set watts = states('sensor.eb3_active_power_l1')|float(1) %}
@@ -45,6 +47,7 @@ template:
       unit_of_measurement: 's'
 
     - name: "Tempo de Disparo ICP L2"
+      unique_id: disparo_icp_L2
       icon: "mdi:target-variant"
       state: >-
         {% set watts = states('sensor.eb3_active_power_l2')|float(1) %}
@@ -62,6 +65,7 @@ template:
       unit_of_measurement: 's'
 
     - name: "Tempo de Disparo ICP L3"
+      unique_id: disparo_icp_L3
       icon: "mdi:target-variant"
       state: >-
         {% set watts = states('sensor.eb3_active_power_l3')|float(1) %}
