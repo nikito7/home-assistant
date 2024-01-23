@@ -6,7 +6,7 @@ template:
 #
     - name: Sun Elevation
       unique_id: sun_elevation
-      state: >-
+      state: >
         {% set x = state_attr('sun.sun', 'elevation')|float(0) %}
         {% if x > 0 %}
           {{ x }}
@@ -19,7 +19,7 @@ template:
 
     - name: Fake Solar W
       unique_id: fake_solar_w
-      state: >-
+      state: >
         {% set a = states('sensor.sun_elevation')|float %}
         {% if a > 0 %}
           {{ (a * 8 * 6.76)|round(1) }}
@@ -32,7 +32,7 @@ template:
 
     - name: "U1 Power"
       unique_id: u1_power
-      state: >-
+      state: >
         {% set a = 240 %}
         {% set b = states('sensor.salicru_load')|int(0) %}
         {% set x = (a * b / 100)|int(0) %}
