@@ -43,7 +43,7 @@ homeassistant:
     #mt_rest:    !include pkg/mt/rest.yaml
     ttn:        !include pkg/ttn.yaml
     eb5ttn:     !include pkg/eb5-ttn.yaml
-    eb1ttn:     !include pkg/eb1-ttn.yaml
+    #eb1ttn:     !include pkg/eb1-ttn.yaml
     adc1ttn:    !include pkg/adc1-ttn.yaml
 
 ###
