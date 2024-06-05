@@ -19,4 +19,20 @@ template:
       unit_of_measurement: "m"
       icon: "mdi:leak"
 
+#
+    - name: Water Level 4-20ma
+      unique_id: water_level_4_20ma
+      state: >-
+        {% set min = 2 %}
+        {% set b = states('sensor.eb3_adc_addon')|float(None) %}
+        {% if b != None %}
+          {{ ((b - min) * 0.835)|round(2) }}
+        {% else %}
+          {{ states('sensor.t8_water_level') }}
+        {% endif %}
+      state_class: measurement
+      device_class: distance
+      unit_of_measurement: "m"
+      icon: "mdi:leak"
+
 # EOF
