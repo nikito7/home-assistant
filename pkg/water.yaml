@@ -26,9 +26,9 @@ template:
         {% set min = 2 %}
         {% set b = states('sensor.eb3_adc_addon')|float(None) %}
         {% if b != None %}
-          {{ ((b - min) * 0.835)|round(2) }}
+          {{ ((b - min) * 0.72)|round(2) }}
         {% else %}
-          {{ states('sensor.t8_water_level') }}
+          {{ states('sensor.water_level_4_20ma') }}
         {% endif %}
       state_class: measurement
       device_class: distance
