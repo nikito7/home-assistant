@@ -23,10 +23,10 @@ template:
     - name: Water Level 4-20ma
       unique_id: water_level_4_20ma
       state: >-
-        {% set min = 2.15 %}
+        {% set min = 1.2 %}
         {% set b = states('sensor.eb3_adc_addon')|float(999.99) %}
         {% if b != 999.99 %}
-          {{ ((b - min) * 0.72)|round(2) }}
+          {{ ((b - min) * 0.55)|round(2) }}
         {% else %}
           {{ states('sensor.water_level_4_20ma') }}
         {% endif %}
