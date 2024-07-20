@@ -6,7 +6,7 @@ sensor.p207_voltage_control_module:
 sensor.p207_ambient_air_temp:
   state_class: measurement
   
-p207_engine_coolant_temperature:
+sensor.p207_engine_coolant_temperature:
   state_class: measurement
 
 sensor.p207_intake_air_temperature:
