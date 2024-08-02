@@ -4,27 +4,27 @@ template:
 #
   - sensor:
 #
-    - name: T8 Water Level
-      unique_id: t8_water_level
-      state: >-
-        {% set a = 0.40 %}
-        {% set b = states('sensor.t08_ultrasonic')|float(999.99) %}
-        {% if b != 999.99 %}
-          {{ (a - b)|round(2) }}
-        {% else %}
-          {{ states('sensor.t8_water_level') }}
-        {% endif %}
-      state_class: measurement
-      device_class: distance
-      unit_of_measurement: "m"
-      icon: "mdi:leak"
+#    - name: T8 Water Level
+#      unique_id: t8_water_level
+#      state: >-
+#        {% set a = 0.40 %}
+#        {% set b = states('sensor.t08_ultrasonic')|float(999.99) %}
+#        {% if b != 999.99 %}
+#          {{ (a - b)|round(2) }}
+#        {% else %}
+#          {{ states('sensor.t8_water_level') }}
+#        {% endif %}
+#      state_class: measurement
+#      device_class: distance
+#      unit_of_measurement: "m"
+#      icon: "mdi:leak"
 
 #
     - name: Water Level 4-20ma
       unique_id: water_level_4_20ma
       state: >-
         {% set min = 1.2 %}
-        {% set b = states('sensor.eb3_adc_addon')|float(999.99) %}
+        {% set b = states('sensor.eb3a_adc_addon')|float(999.99) %}
         {% if b != 999.99 %}
           {{ ((b - min) * 0.55)|round(2) }}
         {% else %}
