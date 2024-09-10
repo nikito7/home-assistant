@@ -2,14 +2,21 @@
 
 sensor.p207_voltage_control_module:
   state_class: measurement
+  device_class: voltage
 
 sensor.p207_ambient_air_temp:
   state_class: measurement
+  device_class: temperature
   
 sensor.p207_engine_coolant_temperature:
   state_class: measurement
+  device_class: temperature
 
 sensor.p207_intake_air_temperature:
+  state_class: measurement
+  device_class: temperature
+
+sensor.p207_mass_air_flow_rate:
   state_class: measurement
   
 # adc
@@ -18,22 +25,12 @@ sensor.tasmota_adc_analog_a0:
   unit_of_measurement: raw
   state_class: measurement
 
-# pressure
-
-sensor.g930f_pressure_sensor:
-  state_class: measurement
-  
 # input
 
 input_number.agua_m:
   state_class: total_increasing
   device_class: water
   unit_of_measurement: L
-
-# radius
-
-zone.home:
-  radius: 50
 
 # fix error log
 
