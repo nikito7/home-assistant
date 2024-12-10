@@ -17,14 +17,14 @@ template:
         {% set watts = states('sensor.eb3_active_power_import')|float(1) %}
         {% set pf = states('sensor.eb3_power_factor')|float(1) %} 
         {% set potencia_inst = (watts/pf) %}
-        {% set potencia_max_kva = (6.9*1000) %}
+        {% set potencia_max_kva = (10.35*1000) %}
         {% set q_factor = 50 %}
         {% set k_factor = (130/100) %}
         {% set x = (q_factor/((potencia_inst/potencia_max_kva)-k_factor))|int(0)|round(0) %}
         {% if x > 0 and x < 900 %}
           {{ x }}
         {% else %}
-          {{ 0 }}
+          {{ -99 }}
         {% endif %}
       unit_of_measurement: 's'
 
@@ -35,14 +35,14 @@ template:
         {% set watts = states('sensor.eb3_active_power_l1')|float(1) %}
         {% set pf = states('sensor.eb3_power_factor_l1')|float(1) %} 
         {% set potencia_inst = (watts/pf) %}
-        {% set potencia_max_kva = (6.9*1000/3) %}
+        {% set potencia_max_kva = (10.35*1000/3) %}
         {% set q_factor = 50 %}
         {% set k_factor = (130/100) %}
         {% set x = (q_factor/((potencia_inst/potencia_max_kva)-k_factor))|int(0)|round(0) %}
         {% if x > 0 and x < 900 %}
           {{ x }}
         {% else %}
-          {{ 0 }}
+          {{ -99 }}
         {% endif %}
       unit_of_measurement: 's'
 
@@ -53,14 +53,14 @@ template:
         {% set watts = states('sensor.eb3_active_power_l2')|float(1) %}
         {% set pf = states('sensor.eb3_power_factor_l2')|float(1) %} 
         {% set potencia_inst = (watts/pf) %}
-        {% set potencia_max_kva = (6.9*1000/3) %}
+        {% set potencia_max_kva = (10.35*1000/3) %}
         {% set q_factor = 50 %}
         {% set k_factor = (130/100) %}
         {% set x = (q_factor/((potencia_inst/potencia_max_kva)-k_factor))|int(0)|round(0) %}
         {% if x > 0 and x < 900 %}
           {{ x }}
         {% else %}
-          {{ 0 }}
+          {{ -99 }}
         {% endif %}
       unit_of_measurement: 's'
 
@@ -71,14 +71,14 @@ template:
         {% set watts = states('sensor.eb3_active_power_l3')|float(1) %}
         {% set pf = states('sensor.eb3_power_factor_l3')|float(1) %} 
         {% set potencia_inst = (watts/pf) %}
-        {% set potencia_max_kva = (6.9*1000/3) %}
+        {% set potencia_max_kva = (10.35*1000/3) %}
         {% set q_factor = 50 %}
         {% set k_factor = (130/100) %}
         {% set x = (q_factor/((potencia_inst/potencia_max_kva)-k_factor))|int(0)|round(0) %}
         {% if x > 0 and x < 900 %}
           {{ x }}
         {% else %}
-          {{ 0 }}
+          {{ -99 }}
         {% endif %}
       unit_of_measurement: 's'
 
