@@ -2,6 +2,7 @@
 
 command_line:
   - sensor:
+      unique_id: ookla_data
       name: "Ookla Data"
       command: "/config/apps/speedtest -f json --accept-license --accept-gdpr"
       scan_interval: 1833
@@ -13,10 +14,9 @@ command_line:
           {{ ping + "," + dn + "," + up }}
 
 template:
-
   - sensor:
-
     - name: "Ookla Ping"
+      unique_id: ookla_ping
       state: >-
         {% set x = states('sensor.ookla_data').split(',')[0] | float(0) %}
         {% if x > 0 %}
@@ -29,6 +29,7 @@ template:
       state_class: measurement
 
     - name: "Ookla Download"
+      unique_id: ookla_download
       state: >-
         {% set x = states('sensor.ookla_data').split(',')[1] | float(0) %}
         {% if x > 0 %}
@@ -41,6 +42,7 @@ template:
       state_class: measurement
 
     - name: "Ookla Upload"
+      unique_id: ookla_upload
       state: >-
         {% set x = states('sensor.ookla_data').split(',')[2] | float(0) %}
         {% if x > 0 %}
@@ -52,4 +54,5 @@ template:
       unit_of_measurement: Mbps
       state_class: measurement
 
-#eof
+# EOF
+
