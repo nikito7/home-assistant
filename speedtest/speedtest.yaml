@@ -1,8 +1,7 @@
 # speedtest-cli ookla bin
 
-sensor:
-
-  - platform: command_line
+command_line:
+  - sensor:
     name: "Ookla Data"
     command: "/config/apps/speedtest -f json --accept-license --accept-gdpr"
     scan_interval: 1833
