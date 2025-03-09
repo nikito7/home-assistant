@@ -1,3 +1,5 @@
+# Statistics
+
 - Find ID:
 
 SELECT * FROM "statistics_meta" WHERE statistic_id = 'sensor.pulse_hc_debug'
