@@ -11,3 +11,22 @@
 <br>
 {{ hw }} °C     
 ```
+
+
+```yaml
+{% set x = states('sensor.t44_ds18b20_aquarium_temp')|float(0)|round(1) %}
+
+🐟 
+{% if x > 20 %}
+🟠
+{% endif %}
+
+<br>
+{{ x }} °C     
+```
+
+
+____
+EOF
+
+sensor.t44_ds18b20_aquarium_temp
