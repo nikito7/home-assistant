@@ -1,24 +1,3 @@
-# torque
-
-sensor.p207_voltage_control_module:
-  state_class: measurement
-  device_class: voltage
-
-sensor.p207_ambient_air_temp:
-  state_class: measurement
-  device_class: temperature
-  
-sensor.p207_engine_coolant_temperature:
-  state_class: measurement
-  device_class: temperature
-
-sensor.p207_intake_air_temperature:
-  state_class: measurement
-  device_class: temperature
-
-sensor.p207_mass_air_flow_rate:
-  state_class: measurement
-  
 # adc
 
 sensor.tasmota_adc_analog_a0:
@@ -45,38 +24,11 @@ sensor.db_size:
 
 # temp
 
-sensor.mmc_3e_temp:
-  friendly_name: ST
-sensor.mmc_e3_temp:
-  friendly_name: HG
-sensor.mmc_33_temp:
-  friendly_name: GN
-
-# hum
-
-sensor.mmc_3e_hum:
-  friendly_name: ST
-sensor.mmc_e3_hum:
-  friendly_name: HG
-sensor.mmc_33_hum:
-  friendly_name: GN
-
-# batt
-
-sensor.mmc_3e_batt:
-  friendly_name: ST
-sensor.mmc_e3_batt:
-  friendly_name: HG
-sensor.mmc_33_batt:
-  friendly_name: GN
-
-# signal
-
-sensor.mmc_3e_signal:
-  friendly_name: ST
-sensor.mmc_e3_signal:
-  friendly_name: HG
-sensor.mmc_33_signal:
-  friendly_name: GN
+#sensor.mmc_3e_temp:
+#  friendly_name: ST
+#sensor.mmc_e3_temp:
+#  friendly_name: HG
+#sensor.mmc_33_temp:
+#  friendly_name: GN
 
 # EOF
