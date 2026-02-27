@@ -1,0 +1,8 @@
+{% set temp = states('sensor.mho_7c_temp')|float(0)|round(1) %}
+
+{% if temp < 19 %}
+🥶
+{% endif %}
+
+<br>
+{{ temp }} °C
