@@ -77,21 +77,21 @@ intent_script:
 
 ###
 
-mqtt:
+#mqtt:
 #
-  sensor:
+#  sensor:
 #
-    - name: "Windows CPU Usage"
-      unique_id: "win_pc_cpu"
-      state_topic: "windows/pc/cpu_usage"
-      value_template: >-
-          {% set x = value|int(0) %}
-          {% if x < 101 %}
-            {{ x }}
-          {% endif %}
-      unit_of_measurement: "%"
-      state_class: measurement
-      icon: mdi:gauge
+#    - name: "Windows CPU Usage"
+#      unique_id: "win_pc_cpu"
+#      state_topic: "windows/pc/cpu_usage"
+#      value_template: >-
+#          {% set x = value|int(0) %}
+#          {% if x < 101 %}
+#            {{ x }}
+#          {% endif %}
+#      unit_of_measurement: "%"
+#      state_class: measurement
+#      icon: mdi:gauge
 
 ###
 ###
