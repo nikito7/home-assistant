@@ -1,8 +1,7 @@
+{% set x = states('sensor.test_t46_x04_adc_a2_linear')|float(0)|round(2) %}
 {% set temp = states('sensor.mho_7c_temp')|float(0)|round(1) %}
 
-{% if temp < 19 %}
-🥶
-{% endif %}
 
+{{ x }} m
 <br>
 {{ temp }} °C
