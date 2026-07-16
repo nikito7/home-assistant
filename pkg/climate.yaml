@@ -1,12 +1,12 @@
 climate:
 
   - platform: generic_thermostat
-    unique_id: Frigo_p03_77
-    name: Frigo P03 77
+    unique_id: Frigo_p03_da
+    name: Frigo P03 DA
     heater: switch.zb_p03_8020_orange
     target_sensor: sensor.mmc_da_temp
-    min_temp: 10
-    max_temp: 14
+    min_temp: 8
+    max_temp: 21
     ac_mode: true
     cold_tolerance: 0.2
     hot_tolerance: 0.2
