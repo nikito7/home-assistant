@@ -33,7 +33,7 @@ template:
     - name: "U1 Power"
       unique_id: u1_power
       state: >
-        {% set a = 240 %}
+        {% set a = 600 %}
         {% set b = states('sensor.salicru_load')|int(0) %}
         {% set x = (a * b / 100)|int(0) %}
         {{ x }}
