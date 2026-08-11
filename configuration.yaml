@@ -36,13 +36,13 @@ homeassistant:
   packages: !include_dir_named pkg/active/
 
 ###
-
-http:
-
-  use_x_forwarded_for: true
-  trusted_proxies:
-    - 172.30.0.0/16
-
+#
+#http:
+#
+#  use_x_forwarded_for: true
+#  trusted_proxies:
+#    - 172.30.0.0/16
+#
 ###
 
 recorder:
