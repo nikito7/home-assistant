@@ -1,0 +1,4 @@
+{{ states('sensor.eb3_active_power_l1')|int(0) }} W<br>
+{{ states('sensor.eb3_active_power_l2')|int(0) }} W<br>
+{{ states('sensor.eb3_active_power_l3')|int(0) }} W
+
