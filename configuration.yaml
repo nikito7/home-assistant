@@ -8,6 +8,11 @@ script: !include scripts.yaml
 
 ###
 
+shell_command:
+  usbreset: uhubctl -l 9 -p 1 -a cycle --force
+
+###
+
 tts:
 
   - platform: google_translate
